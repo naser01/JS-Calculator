@@ -2,10 +2,8 @@ li {
     list-style-type: none;
 }
 
-.clickers {
-    flex: 50%;
-    width: 50%;
-    display: inline;
+.container {
+
 }
 
 .calculator {
@@ -52,7 +50,8 @@ li {
 **************************/
 
 .numbers {
-    margin-left: 115px;  
+    margin-left: 115px; 
+    display: inline;
 }
 
 .nums {
@@ -60,7 +59,6 @@ li {
     font-size: 40px;
     font-family: sans-serif;
     font-style: block;
-    margin-top: 15px;
     height: 50px;
     width: 50px;
 }
@@ -74,9 +72,9 @@ li {
 
 
 .column-num li{
-    display: flex;
     float: left;
     flex: 33.33%;
+    display: inline;
 }
   
 
@@ -97,7 +95,7 @@ li {
 ********* Operators ******
 **************************/
 .operators {
-    margin-left: 0px;
+    display: inline;
 }
 
 .ops {
@@ -112,5 +110,5 @@ li {
 
 .column-op li{
     display: inline;
-    flex: 50%;
 }
+
