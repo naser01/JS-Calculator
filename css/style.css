@@ -1,3 +1,116 @@
+li {
+    list-style-type: none;
+}
+
+.clickers {
+    flex: 50%;
+    width: 50%;
+    display: inline;
+}
+
 .calculator {
-    
+    position: relative;
+    top: 15%;
+    left: 35%;
+    height: 400px;
+    width: 350px;
+    border: 2px solid black;
+    background-color: rgb(68, 68, 99);
+    border-radius: 7px;
+}
+
+.background-image {
+    background-image: url(../background.jpg);
+}
+
+.terminal {
+    margin-top: 5%;
+    margin-left: 25px;
+    border-radius: 5px;
+}
+
+.terminal-eq {
+    position: relative;
+    height: 35px;
+    width: 300px;
+    border: 2px solid black;
+    border-bottom-style: dotted;
+    background-color: white;
+}
+
+.terminal-result {
+    position: relative;
+    height: 35px;
+    width: 300px;
+    border: 2px solid black;
+    border-top-style: none;
+    background-color: white;
+}
+
+/*************************
+********* NUMBERS ********
+**************************/
+
+.numbers {
+    margin-left: 115px;  
+}
+
+.nums {
+    text-align: center;
+    font-size: 40px;
+    font-family: sans-serif;
+    font-style: block;
+    margin-top: 15px;
+    height: 50px;
+    width: 50px;
+}
+
+.buttons {
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 5px;
+    background-color: whitesmoke;
+}
+
+
+.column-num li{
+    display: flex;
+    float: left;
+    flex: 33.33%;
+}
+  
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.buttons:hover, .nums:hover{
+    background-color: red;
+    color: white;
+}
+
+.buttons:focus { outline: none; }
+
+/*************************
+********* Operators ******
+**************************/
+.operators {
+    margin-left: 0px;
+}
+
+.ops {
+    text-align: center;
+    font-size: 40px;
+    font-family: sans-serif;
+    font-style: block;
+    margin-top: 0px;
+    height: 50px;
+    width: 50px;
+}
+
+.column-op li{
+    display: inline;
+    flex: 50%;
 }
