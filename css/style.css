@@ -5,7 +5,6 @@ li {
 
 .container {
     display: inline;
-    float: left;
 }
 
 .calculator {
@@ -107,7 +106,6 @@ li {
 **************************/
 
 .column-num li{
-    float: left;
     flex: 33.33%;
     display: inline;
     margin-left: 5px;
