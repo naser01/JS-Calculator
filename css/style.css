@@ -54,11 +54,20 @@ li {
     font-size: 40px;
     font-family: sans-serif;
     font-style: block;
+}
+
+.buttons {
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 4px;
+    background-color: whitesmoke;
     height: 50px;
     width: 50px;
 }
 
-.buttons {
+.buttons-bigger {
+    width: 108px;
+    height: 50px;
     border: 2px solid black;
     border-radius: 4px;
     margin: 4px;
@@ -107,7 +116,6 @@ li {
 }
 
 .container li {
-    display: inline;
     float: left;
 }
 
