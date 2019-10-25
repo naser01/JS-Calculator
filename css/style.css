@@ -1,5 +1,6 @@
 li {
     list-style-type: none;
+    outline: none;
 }
 
 .container {
@@ -11,8 +12,8 @@ li {
     position: relative;
     top: 15%;
     left: 35%;
-    height: 400px;
-    width: 380px;
+    height: 370px;
+    width: 368px;
     border: 2px solid black;
     background-color: rgb(68, 68, 99);
     border-radius: 7px;
@@ -31,7 +32,7 @@ li {
 .terminal-eq {
     position: relative;
     height: 35px;
-    width: 300px;
+    width: 303px;
     border: 2px solid black;
     border-bottom-style: dotted;
     background-color: white;
@@ -40,7 +41,7 @@ li {
 .terminal-result {
     position: relative;
     height: 35px;
-    width: 300px;
+    width: 303px;
     border: 2px solid black;
     border-top-style: none;
     background-color: white;
@@ -49,14 +50,22 @@ li {
 /*************************
 ********* NUMBERS ********
 **************************/
-.nums {
+
+.btn-font {
     text-align: center;
-    font-size: 40px;
+    font-size: 30px;
     font-family: sans-serif;
     font-style: block;
 }
 
-.buttons {
+.btn-font-big {
+    text-align: center;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-style: block;
+}
+
+.btns {
     border: 2px solid black;
     border-radius: 4px;
     margin: 4px;
@@ -65,7 +74,16 @@ li {
     width: 50px;
 }
 
-.buttons-bigger {
+.btn-equal {
+    width: 180px;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 4px;
+    background-color: whitesmoke;
+}
+
+.btn-clear {
     width: 108px;
     height: 50px;
     border: 2px solid black;
@@ -74,6 +92,19 @@ li {
     background-color: whitesmoke;
 }
 
+.btns:hover, .btn-font:hover{
+    background-color: red;
+    color: white;
+}
+
+.btns-bigger:hover, .btn-font-big:hover{
+    background-color: green;
+    color: white;
+}
+
+/*************************
+********* Operators ******
+**************************/
 
 .column-num li{
     float: left;
@@ -89,34 +120,15 @@ li {
     clear: both;
 }
 
-.buttons:hover, .nums:hover{
-    background-color: red;
-    color: white;
-}
-
-.buttons:focus { outline: none; }
-
-/*************************
-********* Operators ******
-**************************/
-
-.ops {
-    text-align: center;
-    font-size: 40px;
-    font-family: sans-serif;
-    font-style: block;
-    margin-top: 0px;
-    height: 50px;
-    width: 50px;
-}
-
 .column-op li{
     display: inline;
-    margin-top: 5px;
 }
 
 .container li {
     float: left;
 }
 
-
+.clear-eqaul {
+    display: inline;
+    flex: 50%;
+}
