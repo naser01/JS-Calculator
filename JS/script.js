@@ -1,19 +1,21 @@
+/*import { elements } from "./base.js";*/
+
 function buttons() {
 
     document.getElementById('1').addEventListener('click', e => {
         eq.push(1);
-        const markup = `<p>1<p>`;
-        
+
+        document.querySelector('.terminal-eq').insertAdjacentText('beforeend', 1);
     });
 
     document.getElementById('2').addEventListener('click', e => {
         eq.push(2);
-        const markup = `<p>2<p>`;
+        document.querySelector('.terminal-eq').insertAdjacentText('beforeend', 2);
     });
 
     document.getElementById('3').addEventListener('click', e => {
         eq.push(3);
-        const markup = `<p>3<p>`;
+        document.querySelector('.terminal-eq').insertAdjacentText('beforeend', 3);
     });
 
     document.getElementById('4').addEventListener('click', e => {
@@ -41,7 +43,7 @@ function buttons() {
     });
 
     document.getElementById('plus').addEventListener('click', e => {
-        eq.push('+'); 
+        document.querySelector('.terminal-eq').insertAdjacentText('beforeend', '+');
     });
 
     document.getElementById('minus').addEventListener('click', e => {
