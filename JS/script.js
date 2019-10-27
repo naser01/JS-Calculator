@@ -84,8 +84,16 @@ function buttons() {
         eq.push('/');
         document.querySelector('.terminal-nums').insertAdjacentText('beforeend', ')');
     });
+
+    document.getElementById('delete').addEventListener('click', e => {
+        eq.pop();
+        const el = document.querySelector('.terminal-nums');
+        el.parentNode.removeChild(el);
+    });
     
 }
+
+
 
 function result(){
     function calc(h){
