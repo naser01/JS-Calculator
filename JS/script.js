@@ -96,10 +96,10 @@ function buttons() {
 
 
 function result(){
+    
     function calc(h){
         const eqString = h.join('');
-        const evaluatString = eval(eqString);
-        console.log(evaluatString);    
+        const evaluatString = eval(eqString);   
         return(evaluatString) ;
     }
     document.getElementById('equal').addEventListener('click', e => {
