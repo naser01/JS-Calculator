@@ -11,10 +11,12 @@
     <div class="calculator">
         <div class="terminal">
             <div class="terminal-eq">
-                <!--<p></p>-->
+                <p class="terminal-nums">
+
+                </p>
             </div>
-            <div class="terminal-result">
-                <!--<p></p>-->
+            <div class="terminal-result terminal-nums">
+
             </div>
         
         </div>
@@ -49,26 +51,26 @@
 
                 <li>
     
-                    <div class="row">
-                        <ul class="column-op">
-                            <li><button class="btns btn-font" id="plus">+</button></li>
-                            <li><button class="btns btn-font" id="minus">-</button></li> 
-                        </ul>
-                    </div>
+                <div class="row">
+                    <ul class="column-op">
+                        <li><button class="btns btn-font" id="plus">+</button></li>
+                        <li><button class="btns btn-font" id="minus">-</button></li> 
+                    </ul>
+                </div>
 
-                    <div class="row">
-                        <ul class="column-op">
-                            <li><button class="btns btn-font" id="multi">*</button></li>
-                            <li><button class="btns btn-font" id="div">/</button></li> 
-                        </ul>
-                    </div>
+                <div class="row">
+                    <ul class="column-op">
+                        <li><button class="btns btn-font" id="multi">*</button></li>
+                        <li><button class="btns btn-font" id="div">/</button></li> 
+                    </ul> 
+                </div>
 
-                    <div class="row">
-                        <ul class="column-op">
-                            <li><button class="btns btn-font" id="3">(</button></li>
-                            <li><button class="btns btn-font" id="3">)</button></li> 
-                        </ul>
-                    </div>
+                <div class="row">
+                    <ul class="column-op">
+                        <li><button class="btns btn-font" id="brac-left">(</button></li>
+                        <li><button class="btns btn-font" id="brac-right">)</button></li> 
+                    </ul>
+                </div>
 
                 </li>
 
@@ -79,18 +81,19 @@
 
         <div class="row">
             <ul class="container">
-                <li>
+                <li class="float-left">
                     <div class="row">
                         <ul>
-                            <li><button class="btn-equal btn-font-big">=</button></li>
+                            <li><button class="btn-equal btn-font-big" id="zero">0</button></li>
+                            <li><button class="btn-equal btn-font-big" id="equal">=</button></li>
                         </ul>
                     </div>
                 </li>
 
-                <li>
+                <li class="float-right">
                     <div class="row">
                         <ul>
-                            <li><button class="btn-clear btn-font-big">Clear</button></li>
+                            <li><button class="btn-clear btn-font-big" id="clear">Clear</button></li>
                         </ul>
                     </div>
                 </li>
