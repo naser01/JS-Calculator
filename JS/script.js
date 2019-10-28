@@ -4,6 +4,8 @@ let eq = [];
 
 function buttons() {
 
+
+    
     document.getElementById('zero').addEventListener('click', e => {
         eq.push('0');
         document.querySelector('.terminal-nums').insertAdjacentText('beforeend', 0);
@@ -90,10 +92,8 @@ function buttons() {
         const el = document.querySelector('.terminal-nums');
         el.parentNode.removeChild(el);
     });
-    
+
 }
-
-
 
 function result(){
     
@@ -104,9 +104,11 @@ function result(){
     }
     document.getElementById('equal').addEventListener('click', e => {
         document.querySelector('.terminal-result').insertAdjacentHTML('beforeend', calc(eq));
-    })  
+    }) 
+
 }
 
+/*document.querySelector('terminal-result').childNodes.values;*/
 
 buttons();
 result();
