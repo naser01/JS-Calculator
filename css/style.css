@@ -47,14 +47,21 @@ li {
     background-color: white;
 }
 
-.terminal-nums {
+.terminal-font-res {
     color: black;
     font-weight: 500;
     font-size: 26px;
-    /*margin-left: 5px;
-    margin-bottom: 5px;*/
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
+.terminal-font-num {
+    color: black;
+    font-weight: 500;
+    font-size: 26px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
 /*************************
 ********* NUMBERS ********
 **************************/
