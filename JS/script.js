@@ -88,9 +88,11 @@ function buttons() {
     });
 
     document.getElementById('delete').addEventListener('click', e => {
+        eq.pop();
+
         const markupEq = `<p class="terminal-font-num"> </p>`
         const eqStr = document.querySelector('.terminal-font-num').textContent;
-    
+
         let eqArr = eqStr.split("");
         eqArr.pop();
         let eqArrJoint = eqArr.join('');
