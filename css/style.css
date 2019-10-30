@@ -5,7 +5,7 @@ li {
 
 .container {
     display: inline;
-    width: 100px;
+    
 }
 
 .calculator {
@@ -107,6 +107,7 @@ li {
     background-color: whitesmoke;
     margin-left: 20px;
 }
+
 
 .btns:hover, .btn-font:hover{
     background-color: red;
