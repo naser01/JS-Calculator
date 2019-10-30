@@ -1,7 +1,5 @@
-/*import { elements } from "./base.js";*/
 
 let eq = [];
-
 
 function buttons() {
 
@@ -90,9 +88,17 @@ function buttons() {
     });
 
     document.getElementById('delete').addEventListener('click', e => {
-        eq.pop();
+        const markupEq = `<p class="terminal-font-num"> </p>`
+        const eqStr = document.querySelector('.terminal-font-num').textContent;
+    
+        let eqArr = eqStr.split("");
+        eqArr.pop();
+        let eqArrJoint = eqArr.join('');
+        document.querySelector('.terminal-eq').insertAdjacentHTML("beforeend", markupEq);
         const el = document.querySelector('.terminal-font-num');
         el.parentNode.removeChild(el);
+        document.querySelector('.terminal-font-num').insertAdjacentHTML('beforeend', eqArrJoint);
+
     });
 
     document.getElementById('clear').addEventListener('click', e => {
@@ -114,10 +120,6 @@ function buttons() {
 
 }
 
-function removeResult() {
-    const el = document.querySelector('.terminal-font-res');
-    el.parentNode.removeChild(el);
-}
 
 function result(){
     const resultVal = document.querySelector('.terminal-font-res').textContent;
@@ -129,31 +131,24 @@ function result(){
     }
 
     document.getElementById('equal').addEventListener('click', e => { 
+        const markupRes = `<p class="terminal-font-res"> </p>`;
 
+        document.querySelector('.terminal-result').insertAdjacentHTML("beforeend", markupRes);
+        const el = document.querySelector('.terminal-font-res');
+        el.parentNode.removeChild(el);
         document.querySelector('.terminal-font-res').insertAdjacentHTML('beforeend', calc(eq));
-
-        /*if ((typeof(eval(resultVal))) === "undefined") {
+        /*if ((typeof(eval(resultVal)) === "undefined")) {
             document.querySelector('.terminal-font-res').insertAdjacentHTML('beforeend', calc(eq));
-        } else if ((typeof(eval(resultVal))) === "number") {
-            removeResult();
-            document.querySelector('.terminal-font-res').insertAdjacentHTML('beforeend', calc(eq));
-        }*/
-        
-        /*if ((typeof(eval(resultVal))) === "number") {
+        } else if ((typeof(eval(resultVal)) === "number")) {
+            document.querySelector('.terminal-result').insertAdjacentHTML("beforeend", markupRes);
             const el = document.querySelector('.terminal-font-res');
-            el.parentNode.removeChild(el); 
+            el.parentNode.removeChild(el);
             document.querySelector('.terminal-font-res').insertAdjacentHTML('beforeend', calc(eq));
-
-        } else if ((typeof(eval(resultVal))) === "undefined") {
-
-           document.querySelector('.terminal-font-res').insertAdjacentHTML('beforeend', calc(eq));
-
         }*/
-    }) 
+
+    });
 
 };
-
-/*document.querySelector('terminal-result').childNodes.values;*/
 
 buttons();
 result();
