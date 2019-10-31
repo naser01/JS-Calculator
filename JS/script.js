@@ -3,8 +3,14 @@ let eq = [];
 
 function buttons() {
 
-    const resultVal = document.querySelector('.terminal-font-res').textContent;
-    const removeResult = document.querySelector('.terminal-result').removeChild;
+    function calc(h){
+        const eqString = h.join('');
+        const evaluatString = eval(eqString);   
+        return(evaluatString) ;
+    }
+
+    /*const resultVal = document.querySelector('.terminal-font-res').textContent;
+    const removeResult = document.querySelector('.terminal-result').removeChild;*/
 
     document.getElementById('zero').addEventListener('click', e => {
         eq.push('0');
@@ -58,23 +64,77 @@ function buttons() {
     });
 
     document.getElementById('plus').addEventListener('click', e => {
-        eq.push('+');
-        document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '+');
+        const resultVal = document.querySelector('.terminal-font-res').textContent;
+        const markupEq = `<p class="terminal-font-num"> </p>`;
+    
+
+        if ((typeof(eval(resultVal)) === "undefined")){
+            eq.push('-');
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '+');
+        } else if ((typeof(eval(resultVal)) === "number")) {
+            eq.length = 0;
+            const el = document.querySelector('.terminal-font-num');
+            el.parentNode.removeChild(el);
+            document.querySelector('.terminal-eq').insertAdjacentHTML("beforeend", markupEq);
+            eq.push(resultVal + '+');
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', resultVal + '+');
+        }
     });
 
     document.getElementById('minus').addEventListener('click', e => {
-        eq.push('-');
-        document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '-');
+
+        const resultVal = document.querySelector('.terminal-font-res').textContent;
+        const markupEq = `<p class="terminal-font-num"> </p>`;
+    
+
+        if ((typeof(eval(resultVal)) === "undefined")){
+            eq.push('-');
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '-');
+        } else if ((typeof(eval(resultVal)) === "number")) {
+            eq.length = 0;
+            const el = document.querySelector('.terminal-font-num');
+            el.parentNode.removeChild(el);
+            document.querySelector('.terminal-eq').insertAdjacentHTML("beforeend", markupEq);
+            eq.push(resultVal + '-');
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', resultVal + '-');
+        }
+
     });
 
     document.getElementById('multi').addEventListener('click', e => {
-        eq.push('*');
-        document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '*');
+        const resultVal = document.querySelector('.terminal-font-res').textContent;
+        const markupEq = `<p class="terminal-font-num"> </p>`;
+    
+
+        if ((typeof(eval(resultVal)) === "undefined")){
+            eq.push('-');
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '*');
+        } else if ((typeof(eval(resultVal)) === "number")) {
+            eq.length = 0;
+            const el = document.querySelector('.terminal-font-num');
+            el.parentNode.removeChild(el);
+            document.querySelector('.terminal-eq').insertAdjacentHTML("beforeend", markupEq);
+            eq.push(resultVal + '*');
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', resultVal + '*');
+        }
     });
 
     document.getElementById('div').addEventListener('click', e => {
-        eq.push('/');
-        document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '/');
+        const resultVal = document.querySelector('.terminal-font-res').textContent;
+        const markupEq = `<p class="terminal-font-num"> </p>`;
+    
+
+        if ((typeof(eval(resultVal)) === "undefined")){
+            eq.push('-');
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '/');
+        } else if ((typeof(eval(resultVal)) === "number")) {
+            eq.length = 0;
+            const el = document.querySelector('.terminal-font-num');
+            el.parentNode.removeChild(el);
+            document.querySelector('.terminal-eq').insertAdjacentHTML("beforeend", markupEq);
+            eq.push(resultVal + '/');
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', resultVal + '/');
+        }
     });
 
     document.getElementById('brac-left').addEventListener('click', e => {
@@ -139,15 +199,6 @@ function result(){
         const el = document.querySelector('.terminal-font-res');
         el.parentNode.removeChild(el);
         document.querySelector('.terminal-font-res').insertAdjacentHTML('beforeend', calc(eq));
-        /*if ((typeof(eval(resultVal)) === "undefined")) {
-            document.querySelector('.terminal-font-res').insertAdjacentHTML('beforeend', calc(eq));
-        } else if ((typeof(eval(resultVal)) === "number")) {
-            document.querySelector('.terminal-result').insertAdjacentHTML("beforeend", markupRes);
-            const el = document.querySelector('.terminal-font-res');
-            el.parentNode.removeChild(el);
-            document.querySelector('.terminal-font-res').insertAdjacentHTML('beforeend', calc(eq));
-        }*/
-
     });
 
 };
