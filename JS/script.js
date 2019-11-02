@@ -8,6 +8,103 @@ function buttons() {
         const evaluatString = eval(eqString);   
         return(evaluatString) ;
     }
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 48) {
+            eq.push('0')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', 0);
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 49) {
+            eq.push('1')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', 1);
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 50) {
+            eq.push('2')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', 2);
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 51) {
+            eq.push('3')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', 3);
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 52) {
+            eq.push('4')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', 4);
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 53) {
+            eq.push('5')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', 5);
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 54) {
+            eq.push('6')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', 6);
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 55) {
+            eq.push('7')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', 7);
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 56) {
+            eq.push('8')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', 8);
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 57) {
+            eq.push('9')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', 9);
+        }
+    });
+
+    /*document.addEventListener("keypress", event => {
+        if(event.keyCode === 107) {
+            eq.push('+')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '+');
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 109) {
+            eq.push('-')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '-');
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 106) {
+            eq.push('*')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '*');
+        }
+    });
+
+    document.addEventListener("keypress", event => {
+        if(event.keyCode === 111) {
+            eq.push('/')
+            document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '/');
+        }
+    });*/
 
     document.getElementById('zero').addEventListener('click', e => {
         eq.push('0');
