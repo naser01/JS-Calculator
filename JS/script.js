@@ -9,9 +9,6 @@ function buttons() {
         return(evaluatString) ;
     }
 
-    /*const resultVal = document.querySelector('.terminal-font-res').textContent;
-    const removeResult = document.querySelector('.terminal-result').removeChild;*/
-
     document.getElementById('zero').addEventListener('click', e => {
         eq.push('0');
         document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', 0); 
@@ -69,7 +66,7 @@ function buttons() {
     
 
         if ((typeof(eval(resultVal)) === "undefined")){
-            eq.push('-');
+            eq.push('+');
             document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '+');
         } else if ((typeof(eval(resultVal)) === "number")) {
             eq.length = 0;
@@ -107,7 +104,7 @@ function buttons() {
     
 
         if ((typeof(eval(resultVal)) === "undefined")){
-            eq.push('-');
+            eq.push('*');
             document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '*');
         } else if ((typeof(eval(resultVal)) === "number")) {
             eq.length = 0;
@@ -125,7 +122,7 @@ function buttons() {
     
 
         if ((typeof(eval(resultVal)) === "undefined")){
-            eq.push('-');
+            eq.push('/');
             document.querySelector('.terminal-font-num').insertAdjacentText('beforeend', '/');
         } else if ((typeof(eval(resultVal)) === "number")) {
             eq.length = 0;
